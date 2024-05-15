@@ -8,6 +8,19 @@
     if((isset($_GET['act']))&&($_GET['act']!="")){
         $act = $_GET['act'];
         switch ($act) {
+            case 'sanphamchitiet':
+                
+                if(isset($_GET['idsp'])&&($_GET['idsp']>0)){
+                    $id=$_GET['idsp'];
+                    $onesp=load_sanpham($id);
+                    extract($onesp);
+                    $spdm=load_sanphamdm($id, $category_id);
+                    include "App/views/detail_products.php";
+                }else{
+                    include "App/views/home.php";
+                }
+
+                break;
             case 'shop':
                 include "App/views/shop.php";
                 break;
