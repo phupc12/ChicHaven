@@ -1,0 +1,178 @@
+ <!-- Product Detail Section -->
+ <section style="background: #fff; padding: 50px 0;" class="product-detail">
+        <div class="container">
+            <div class="row">
+                <?php
+                    extract($onesp);
+                    $image_url=$img_path.$image_url;
+                    echo '<div class="col-md-6">
+                            <img style="max-width: 100%;height: auto;" src="'.$image_url.'" class="img-fluid" alt="Product Image">
+                          </div>
+                            <div class="col-md-6">
+                                <h2 style="font-size: 24px; margin-bottom: 20px; color:black;">'.$name.'</h2>
+                                <p style="font-size: 16px;line-height: 1.6;margin-bottom: 20px;font-weight: bold;color: #007bff;margin-bottom: 20px;" class="product-price">$'.$price.'</p>
+                                <p style="font-size: 16px;line-height: 1.6;margin-bottom: 20px;">'.$description.'</p>
+                                <div style="display: flex; align-items: center; " class="quantity-input"> 
+                                    <input style="width: 50px; height: 30px; text-align: center; border: 1px solid #ccc; border-radius: 5px; margin-right: 5px; margin-bottom: 10px;" type="number" id="quantity" min="0" max="100" value="1"> 
+                                </div>
+                                <button style="background-color: #007bff; border: none; padding: 10px 20px; font-size: 18px; transition: background-color 0.3s; font-weight:normal; border-radius: 5px;" class="btn btn-primary hover">Add to Cart</button>
+                            </div>';
+                ?>
+                <!-- <div class="col-md-6">
+                    <img style="max-width: 100%;height: auto;" src="App/views/public/images/product-2.png" class="img-fluid" alt="Product Image">
+                </div>
+                <div class="col-md-6">
+                    <h2 style="font-size: 24px; margin-bottom: 20px; color:black;">Nordic Chair</h2>
+                    <p style="font-size: 16px;line-height: 1.6;margin-bottom: 20px;font-weight: bold;color: #007bff;margin-bottom: 20px;" class="product-price">$50.00</p>
+                    <p style="font-size: 16px;line-height: 1.6;margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum justo vel nisi facilisis, a tempor quam faucibus. Proin sed vehicula ipsum, sit amet scelerisque turpis. Fusce non elit nec justo dapibus finibus.</p>
+                    <div style="display: flex; align-items: center; " class="quantity-input"> 
+                        <input style="width: 50px; height: 30px; text-align: center; border: 1px solid #ccc; border-radius: 5px; margin-right: 5px; margin-bottom: 10px;" type="number" id="quantity" min="1" max="10" value="1"> 
+                    </div>
+                    <button style="background-color: #007bff; border: none; padding: 10px 20px; font-size: 18px; transition: background-color 0.3s; font-weight:normal; border-radius: 5px;" class="btn btn-primary hover">Add to Cart</button>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <div style="background: #fff; padding-top: 50px">
+        <div class="container" style="background: #fff; color: black; font-weight: bold; font-size: 30px">
+            Sản phẩm cùng loại
+        </div>
+    </div>
+    <div style="background: #fff;" class="untree_co-section product-section before-footer-section">
+		    <div class="container">
+		      	<div class="row">
+                    <?php
+                        foreach ($spdm as $spdm) {
+                            extract($spdm);
+                            $linksp="index.php?act=sanphamchitiet&idsp=".$id;
+                            $image_url=$img_path.$image_url;
+                            echo '<div class="col-12 col-md-4 col-lg-3 mb-5">
+                                    <a class="product-item" href="'.$linksp.'">
+                                        <img src="'.$image_url.'" class="img-fluid product-thumbnail">
+                                        <h3 class="product-title">'.$name.'</h3>
+                                        <strong class="product-price">$'.$price.'</strong>
+            
+                                        <span class="icon-cross">
+                                            <img src="App/views/public/images/cross.svg" class="img-fluid">
+                                        </span>
+                                    </a>
+                                </div>';
+                        }
+                    ?>
+
+		      		<!-- Start Column 1 -->
+					<!-- <div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="#">
+							<img src="images/product-3.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Nordic Chair</h3>
+							<strong class="product-price">$50.00</strong>
+
+							<span class="icon-cross">
+								<img src="images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div>  -->
+					<!-- End Column 1 -->
+						
+					<!-- Start Column 2 -->
+					<!-- <div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="#">
+							<img src="images/product-1.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Nordic Chair</h3>
+							<strong class="product-price">$50.00</strong>
+
+							<span class="icon-cross">
+								<img src="images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div>  -->
+					<!-- End Column 2 -->
+
+					<!-- Start Column 3 -->
+					<!-- <div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="#">
+							<img src="images/product-2.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Kruzo Aero Chair</h3>
+							<strong class="product-price">$78.00</strong>
+
+							<span class="icon-cross">
+								<img src="images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div> -->
+					<!-- End Column 3 -->
+
+					<!-- Start Column 4 -->
+					<!-- <div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="#">
+							<img src="images/product-3.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Ergonomic Chair</h3>
+							<strong class="product-price">$43.00</strong>
+
+							<span class="icon-cross">
+								<img src="images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div> -->
+					<!-- End Column 4 -->
+
+
+					<!-- Start Column 1 -->
+					<!-- <div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="#">
+							<img src="images/product-3.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Nordic Chair</h3>
+							<strong class="product-price">$50.00</strong>
+
+							<span class="icon-cross">
+								<img src="images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div>  -->
+					<!-- End Column 1 -->
+						
+					<!-- Start Column 2 -->
+					<!-- <div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="#">
+							<img src="images/product-1.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Nordic Chair</h3>
+							<strong class="product-price">$50.00</strong>
+
+							<span class="icon-cross">
+								<img src="images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div>  -->
+					<!-- End Column 2 -->
+
+					<!-- Start Column 3 -->
+					<!-- <div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="#">
+							<img src="images/product-2.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Kruzo Aero Chair</h3>
+							<strong class="product-price">$78.00</strong>
+
+							<span class="icon-cross">
+								<img src="images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div> -->
+					<!-- End Column 3 -->
+
+					<!-- Start Column 4 -->
+					<!-- <div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="#">
+							<img src="images/product-3.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Ergonomic Chair</h3>
+							<strong class="product-price">$43.00</strong>
+
+							<span class="icon-cross">
+								<img src="images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div> -->
+					
+					
+		      	</div>
+		    </div>
+		</div>
