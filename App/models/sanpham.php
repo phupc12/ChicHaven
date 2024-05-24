@@ -9,5 +9,5 @@
         $listsanpham=pdo_query($sql);
         return $listsanpham;
     }
-  
+ 
 ?>
